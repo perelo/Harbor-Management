@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+   <persistence-unit name="harborManagmentPU" transaction-type="RESOURCE_LOCAL">
+      <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+      <class>cas2.model.Boat</class>
+      <class>cas2.model.EmplacementType</class>
+      <class>cas2.model.Emplacement</class>
+      <class>cas2.model.Harbor</class>
+      <class>cas2.model.Model</class>
+      <class>cas2.model.Occupation</class>
+      <class>cas2.model.Owner</class>
+      <class>cas2.model.Passenger</class>
+      <class>cas2.model.Parking</class>
+      <class>cas2.model.Pontoon</class>
+      <class>cas2.model.Resident</class>
+      <class>cas2.model.Trip</class>
+      <class>cas2.model.WaitingBoat</class>
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/orcl.iut.univ-aix.fr"/>
+         <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+         <property name="javax.persistence.jdbc.user" value="perelo"/>
+         <property name="javax.persistence.jdbc.password" value="gWobEL"/>
+		 <property name="eclipselink.logging.level" value="ALL"/>
+         <!-- <property name="eclipselink.ddl-generation" value="create-tables"/> -->
+      </properties>
+   </persistence-unit>
+</persistence>
+

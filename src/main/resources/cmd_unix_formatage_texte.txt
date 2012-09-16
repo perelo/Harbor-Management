@@ -1,0 +1,10 @@
+cd ${workspace}/HarborManagement/src/main/java/cas2
+
+lignes contenant plus de 80 caractères :
+find -name '*\.java' | xargs egrep --color '.{80,}'
+
+lignes contenant des tabulations :
+find -name '*\.java' | xargs grep --color $'\t'
+
+remplacer toutes les tabulations par 4 espaces :
+find -name '*\.java' | xargs sed -i 's/\t/\ \ \ \ /g'
